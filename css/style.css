@@ -1,0 +1,186 @@
+/*
+APP NAME: Postiee
+APP URI: http://www.postiee.com
+Description: App to let you add notes like Post_it notes
+Version: 1.1
+Author: Debraj Rakshit
+Author URI: debrajweb@gmail.com
+Date: 16 December, 2016;
+Date last update: 26 February, 2018;
+*/
+
+@import url('bootstrap.min.css');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400|Gochi+Hand|Handlee');
+@import url('flaticon.css');
+
+/*
+//font-family: 'Source Sans Pro', sans-serif;
+//font-family: 'Roboto Condensed', sans-serif; 
+//font-family: 'Gochi Hand', cursive;
+//font-family: 'Handlee', cursive;
+*/
+
+body{font-family: 'Source Sans Pro', sans-serif; font-size: 16px; font-weight: normal; color: #333; background-color: #fff; word-wrap: break-word;}
+p{text-align: left; word-wrap: break-word;}
+
+/* nav */
+.navbar-brand img{width: 24px; height: 24px;}
+.whiteboard-navigation{min-height: 50px; font-size: 14px;}
+.whiteboard-navigation>.navbar{padding: 0; }
+.whiteboard-navigation>.navbar-nav>li>a{padding-top: 10px; padding-bottom: 10px;}
+.dropdown-menu{margin: 0; padding: 0; border-radius: 0; box-shadow: none;}
+.dropdown-menu>li>a{}
+.dropdown-toggle{cursor: pointer;}
+
+@media (max-width: 767px){
+	
+}
+@media (min-width: 768px){
+	
+}
+@media (min-width: 1200px){
+	
+}
+
+/* header */
+.user-avatar:before{display: inline-block; margin-top: -15px; padding: 3px 0 0 6px; width: 24px; height: 24px; font-size: 14px; background-color: #fff; border-radius: 100%;}
+.profile-pic{float: left; position: relative; margin-right: 10px; width: 24px; height: 24px; border-radius: 100%; overflow: hidden;}
+.profile-pic img{display: block; width: 24px; height: auto; }
+
+/* page */
+.page-wrapper{margin-top: 60px;}
+.page-title h1{font-size: 2.25em; font-weight: 300; text-align: center;}
+.page-wrapper h2{margin-bottom: 30px; font-size: 2.25em; font-weight: 300; text-align: center;}
+.page-content h3{font-size: 1.25em; font-weight: 300; text-align: center;}
+.homepage-content{text-align: center;}
+
+/* homepage */
+#features{padding: 60px 0; background-color: #234a9f;}
+#features h1{color: #fff;}
+#features p{color: #fff;}
+.intro-text{margin-top: 30px; margin-bottom: 30px; }
+.icon-block{position: relative; max-width: 250px; height: auto; margin: 0 auto; background-color: #42abe7; border-radius: 100%; overflow: hidden; display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; flex: 1 1 auto; flex-direction: column; flex-wrap: wrap; justify-content: center; align-items: center; -webkit-flex: 1 1 auto; -webkit-flex-direction: column; -webkit-flex-wrap: wrap; -webkit-justify-content: center; -webkit-align-items: center;}
+.icon-block span{display: block; margin: 0 auto; text-align: center;}
+.icon-block span:before{font-size: 6em; color: #fff;}
+.icon-create{background-color: #42abe7;}
+.icon-share{background-color: #e25643;}
+.icon-manage{background-color: #a5ce44;}
+.icon-register{width: 90px; background-color: #42abe7;}
+.icon-register span:before{font-size: 2.25em;}
+.icon-title{color: #fff; font-size: 1.125em;}
+.icon-link{display: block; position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+.user-info{font-weight: 400; font-size: 1.2em;}
+
+/* notes */
+#notes-sortable{margin: 0; padding: 0; list-style: none;}
+#notes-sortable li{display: inline-block; margin: 10px;}
+.note-wrapper{width: 320px; height: 320px;}
+.note-lists{list-style: none !important;}
+.note-lists li{display: list-item !important;}
+
+/* forms */
+.inline-form{display: inline;}
+#cancel-friend{visibility: hidden;}
+.show{visibility: visible !important; transform: all ease-in-out 0.3s; -webkit-transform: all ease-in-out 0.3s; -moz-transform: all ease-in-out 0.3s;}
+.hide{visibility: hidden !important; transform: all ease-in-out 0.3s; -webkit-transform: all ease-in-out 0.3s; -moz-transform: all ease-in-out 0.3s;}
+.form-label{display: block; }
+
+
+
+
+/* buttons */
+.btn-login{padding: 5px 24px; background-color: #3c5eab; border: 0; font-size: 1em; color: #fff; border-radius: 4px;}
+.btn-login:hover, .btn-login:focus{color: #fff; background-color: #449d44;}
+.btn-add{margin: 5px 0; padding: 4px 15px; background-color: #3c5eab; border: 0; color: #fff; border-radius: 4px;}
+.btn-add:hover, .btn-add:focus{color: #fff; background-color: #e25643;}
+.edit-account-link, .add-friend-link{font-size: 16px; font-weight: 300; color: #fff; background-color: #42abe7;}
+button.add-friend-link{float: right; border: 0; outline: none;}
+.cancel-friend-link{font-size: 16px; font-weight: 300; color: #fff; background-color: #93c83e;}
+button.cancel-friend-link{float: right; border: 0; outline: none;}
+.btn-request-sent{background-color: #93c83e; transition: all ease-in-out 0.3s;}
+.btn-cancel{padding: 5px 24px; background-color: #d9534f; border: 0; font-size: 1em; color: #fff; border-radius: 4px;}
+.btn-cancel:hover, .btn-cancel:focus{color: #fff; background-color: #c9302c;}
+.btn-view{width: 100%; background-color: #5bc0de; border: 0; color: #fff; border-radius: 4px;}
+.btn-view:hover, .btn-view:focus{color: #fff; background-color: #31b0d5;}
+.btn_restore{font-size: 16px; font-weight: 300; color: #fff; background-color: #42abe7; border-radius: 4px; border: 0; box-shadow: none;}
+
+/* profile */
+.list-profile{margin-top: 30px;}
+.profile-display{text-align: center;}
+.profile-pic-wrapper{position: relative; width: 80px; height: 80px; margin: 0 auto 10px; overflow: hidden;}
+.profile-display-pic{width: 100%; height: auto; }
+
+/* projects */
+.wb-projects{text-align: left;}
+.wb-project-card{float: left; position: relative; margin: 10px; padding: 10px; width: 200px; height: 100px; background-color: #e8e8e8; overflow: hidden; transition: all ease-in-out 0.3s;}
+.wb-project-card:hover{background-color: #3c9ad5;}
+.wb-project-card h3{margin-top: 0;}
+a.wb-project-link{display: block; position: absolute; left: 0; top: 0;  width: 100%; height: 100%;}
+.postit-section-title{}
+.postit-section-title h3{font-weight: 400;}
+.postit-section-title span.note-count{margin: 0 15px; padding: 5px; background-color: #c6c6c6; font-size: 12px; color: #333; border-radius: 4px;}
+.note-count-main{display: block; color: #333; text-align: center;}
+
+
+
+/* post-it */
+.postit{position: relative; font-family: 'Handlee', cursive; position: relative; margin: 15px 0; width: 100%; height: auto; font-size: 1.25em; line-height: 1em; color: #000; background-color: #f77e9d; box-shadow: 3px 3px 5px rgba(0,0,0,0.3); transition: all ease-in-out 0.2s;}
+.postit:hover{box-shadow: 8px 5px 5px rgba(0,0,0,0.5 );}
+.postit-close{position: absolute; display: block; padding: 0; right: 5px; top: 5px; width: 18px; height: 18px; background-color: #fff; border: 0; border-radius: 100%; text-align: center;}
+.postit-close:focus{border: 0; box-shadow: none; outline: none;}
+.postit-edit{position: absolute; display: block; padding: 0; right: 35px; top: 5px; width: 18px; height: 18px; background-color: #fff; border: 0; border-radius: 100%; text-align: center;}
+.postit-edit:focus{border: 0; box-shadow: none; outline: 0;}
+.postit-edit i:before{font-size: 12px;}
+ol.note-lists{display: block; margin: 0; padding: 5px 10px; overflow-x: hidden;}
+ol.note-lists li{margin-left: 25px; margin-bottom: 5px; padding: 0;}
+span.note-count{margin-left: 5px; margin-right: 5px; color: #c6c6c6;}
+span.last-update{font-family: 'Source Sans Pro', sans-serif; margin: 0 0 0 5px; padding: 2px; font-size: 10px; color: #333; background-color: rgba(255,255,255,0.0); border-radius: 4px;}
+span.mod-user{font-family: 'Source Sans Pro', sans-serif; display: block; float: right; width: 24px; height: 24px; margin: 0 0 0 5px; padding: 2px; font-size: 10px; line-height: 20px; text-align: center; color: rgba(255,255,255,0.6); background-color: rgba(0,0,0,0.6); border-radius: 100%;}
+
+/* some prototypes(example bg color)overflow-y: scroll;  */
+/*.postit-id-01{background-color: #f77e9d;}
+.postit-id-02{background-color: #d0e593;}
+.postit-id-03{background-color: #a7cddf;}
+.postit-id-04{background-color: #f2c7d2;}*/
+
+.postit-add{padding: 30px;}
+.color-tile{display: block; width: 20px; height: 20px;}
+.success-message-wrapper, .success-message-wrapper p{text-align: center;}
+
+/* alerts */
+.page-error{margin-top: 60px;}
+.page-error p{text-align: center;}
+.error-alert{font-size: 1.125em; color: #a94442;}
+.success-alert{font-size: 1.125em; color: #3c763d;}
+.require{color: #a94442;}
+.notice-block{margin-top: 30px; text-align: center; color: #31708f;}
+.notice-block p{text-align: center; color: #31708f;}
+.display_error{text-align: center; font-weight: bold; color: #c9302c;}
+span.hilight{color: #337ab7;}
+
+/* section headers */
+.list-group-header{font-weight: bold;}
+.project-title{color: #42abe7;}
+.project-assigned{margin: 0 5px; color: #42abe7;}
+.header-title{margin-left: 60px;}
+.project-id{display: inline-block; width: 40px;}
+.header-badge{background-color: transparent; font-size: 1em; color: #333; }
+.tab-title{display: inline-block; min-width: 120px; color: #42abe7; margin-right: 10px;}
+.tab-data{display: inline-block; min-width: 120px; margin-right: 10px;}
+
+@media (max-width: 767px){
+	
+}
+@media (min-width: 768px){
+	
+}
+@media (min-width: 1200px){
+	
+}
+
+/* search */
+.input-search-icon{padding: 6px; background-color: #fff; border-left: 0;}
+
+/* footer */
+#footer{margin-top: 60px; text-align: center;}
+#footer p{text-align: center;}

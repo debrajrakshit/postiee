@@ -1,0 +1,5 @@
+
+# BEGIN
+Redirect 302 / public/index.php
+
+# END
